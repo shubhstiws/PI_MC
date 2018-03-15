@@ -1,0 +1,40 @@
+---
+title: "Approximating Pi by Monte Carlo method"
+author: "Shubhankar Tiwari"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+![Stephen Hawking](D:/Google Drive/Spring 2018/Courses/DataViz/PiDay/shq.jpg)
+
+## Remembering Stephen Hawking
+
+When people ask about a miracle I tell them about Stephen Hawking. What are the odds of someone who wasn't supposed to live past their 20s would live to be 76? We knew his death was coming but it still shocked everyone. He pretty much tore apart the field and blew away people's minds. He died on Einstein's birthday and was born on Galileo's death day. Coincidently today is also pi day(3.14).
+
+May Hawking rest in peace like he deserves.
+
+## Estimating pie by Monte Carlo method
+
+I decided to approximate pie by the Monte Carlo method and visualize the approximation process. We have a circle of radius 0.5, enclosed by a 1 × 1 square. The area of the circle is $\pi$r$^2$= $\pi$/4, the area of the square is 1. If we divide the area of the circle, by the area of the square we get $\pi$/4.
+
+We then generate a large number of uniformly distributed random points and plot them on the graph. These points can be in any position within the square i.e. between (0,0) and (1,1). We keep track of the total number of points, and the number of points that are inside the circle. If we divide the number of points within the circle by the total number of points, we should get a value that is an approximation of the ratio of the areas we calculated above, $\pi$/4.
+
+## Visualization
+
+This looks like a very simple code and indeed it is, but I have over complicated it to look more visually appealing
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bWWO_slhwC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## Source:
+
+1. [Github](https://github.com/shubhstiws/PI_MC)
+
+2. [Animation inspiration](https://www.reddit.com/r/dataisbeautiful/comments/84ermm/estimating_pi_with_random_numbers_oc/)
